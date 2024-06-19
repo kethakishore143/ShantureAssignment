@@ -1,0 +1,69 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create_forms_input {
+  width: 300px;
+  padding: 10px;
+  border-bottom: 2px solid;
+  outline: none;
+}
+
+.create_forms_button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  justify-content: space-between;
+  background-color: black;
+  color: #ffffff;
+  height: 35px;
+  padding: 2px 5px 2px 5px;
+  margin-top: 10px;
+}
+
+.Checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.Checkbox icon {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.task div span {
+  margin: 0px 5px 0px 4px;
+
+}
+
+.task div .icon {
+  cursor: pointer;
+}
+
+.todotext {
+  font-size: 18px;
+  font-family: "roboto";
+  padding: 10px;
+  color: #ffffff;
+}
+
+.ischeckedtodo {
+  font-size: 18px;
+  font-family: "roboto";
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: line-through;
+}
+
+.shantureimg {
+  background-color: blueviolet;
+}
