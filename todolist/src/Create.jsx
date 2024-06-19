@@ -17,7 +17,7 @@ function Create() {
 
     return (
         <div>
-            <input type='text' className='create_forms_input' onChange={(e) => setTask(e.target.value)} />
+            <input type='text' className='create_forms_input' onChange={(e) => setTask(e.target.value)} placeholder="Enter Task" />
             <button type='button' className='create_forms_button' onClick={handleAdd}>Add Todo</button>
         </div >
     )

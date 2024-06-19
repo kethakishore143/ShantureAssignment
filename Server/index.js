@@ -27,6 +27,17 @@ app.put('/update/:id', (req, res) => {
 
 })
 
+app.put('/uncheck/:id', (req, res) => {
+    const { id } = req.params;
+    TodoModel.findByIdAndUpdate({ _id: id }, { done: false })
+        .then(result => res.json(result))
+        .catch(err => res.json(err))
+
+})
+
+
+
+
 app.post('/add', (req, res) => {
     const task = req.body.task;
 

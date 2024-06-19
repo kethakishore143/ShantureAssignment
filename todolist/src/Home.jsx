@@ -24,6 +24,14 @@ function Home() {
             .catch(err => console.log(err))
     }
 
+    const handeluncheck = (id) => {
+        axios.put('http://localhost:3001/uncheck/' + id)
+            .then(result => {
+                location.reload()
+            })
+            .catch(err => console.log(err))
+    }
+
     const handelDelete = (id) => {
         axios.delete('http://localhost:3001/delete/' + id)
             .then(result => {
@@ -32,19 +40,21 @@ function Home() {
             .catch(err => console.log(err))
     }
 
+
+
     return (
         <div className='home'>
             <img src="https://shanture.com/wp-content/uploads/2024/06/cropped-2.png" alt="shanture" className='shantureimg' />
-            "
+
             <h1>Todo List</h1>
             <Create />
             {
-                todos.length === 0 ? <div>No Records </div> :
+                todos.length === 0 ? <div className='norecords'>No Records </div> :
                     todos.map(todo => (
                         <div className='task'>
                             <div className='Checkbox' onClick={() => handelEdit(todo._id)}>
 
-                                {todo.done ? <BsFillCheckCircleFill className='icon'></BsFillCheckCircleFill> : <BsCircleFill className='icon' />}
+                                {todo.done ? <BsFillCheckCircleFill className='icon' onClick={() => handeluncheck(todo._id)}></BsFillCheckCircleFill  > : <BsCircleFill className='icon' />}
 
                                 <p className={todo.done ? 'ischeckedtodo' : 'todotext'}>{todo.task}</p>
                             </div>
