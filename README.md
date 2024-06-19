@@ -30,7 +30,7 @@ Clone the repository from GitHub:
 
 bash
 Copy code
-git clone https://github.com/yourusername/your-repository.git
+git clone https://github.com/kethakishore143/ShantureAssignment
 Navigate into the project directory:
 
 bash
@@ -59,6 +59,8 @@ Start the application:
 bash
 Copy code
 npm run dev
+# or
+npm start
 # or
 yarn start
 Open your browser and navigate to http://localhost:3000 to view the application.
